@@ -1,0 +1,25 @@
+module RadiantRandomQuotes
+  include Radiant::Taggable
+  
+  arquivo = File.open("#{File.dirname(__FILE__)}/quotes").readlines
+  count = arquivo.length / 2
+  line = rand(count)
+  #quote line
+  quote = arquivo[line * 2]
+  #author line
+  author = arquivo[line * 2 + 1]
+  	
+  desc "Shows a random quote." 
+  tag "randQuote" do |tag|
+%{
+     <div class="quote">
+	<p class="#{tag.attr['opt']}">
+	#{quote}
+	</p>
+	<p>
+	#{author}
+	</p>
+     </div>
+}
+   end
+end
