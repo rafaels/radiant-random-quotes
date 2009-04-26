@@ -1,3 +1,10 @@
-= Radiant Random Quotes
+Radiant Random Quotes
 
-Description goes here
+Adds a random quote from a file to a radius tag.
+
+The file has a quote and an author, quotes in pair lines, and authors in unpair lines.
+
+You only need to add "<r:randQuote />" to your radiant page.
+
+Obs. This project needs help, I'm just begining to learn ruby on rails. I'm glad if someone who have a litle bit more experience participates.
+ps. Specs off, I don't know how to do yet.
